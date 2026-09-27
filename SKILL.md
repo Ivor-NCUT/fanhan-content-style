@@ -7,6 +7,11 @@ description: 以泛函本人的完整原文校准语气，按内容类型路由�
 
 这是一版持续校准的内容风格 Skill。语气训练池包括手册列出的全部 10 篇文档及其延伸的本人回复，共 11 篇完整原文，以及用户后来确认的岗位 JD 定稿；作者和来源各自保留。所有文档也可作为引用素材与长期记忆的候选来源。每次写作都用原文校准，不只照一张规则清单写。语料、来源和修订号见 [`_meta/sources.json`](./_meta/sources.json)。本版原文已获用户授权公开；后续新增材料仍需按当次授权范围处理。
 
+写作任务需要海报、配图、公众号排版、PPT 等视觉设计时，先检查当前环境是否已安装
+[`fanhan-design`](https://github.com/Ivor-NCUT/fanhan-design)。已安装就读取并调用；未安装就用
+当前环境的 Skill 安装器从该仓库根目录安装，再读取其 `SKILL.md`。本 Skill 负责文案语气，
+视觉与版式由设计 Skill 负责。纯文字任务无需安装设计 Skill；不把对方的规则复制进本仓库。
+
 ## 写前
 
 1. 先读完 [`Writing-DNA.md`](./references/Writing-DNA.md)、[`语言DNA.md`](./references/语言DNA.md)、[`文章结构模板.md`](./references/文章结构模板.md)、[`写作视角与认知框架.md`](./references/写作视角与认知框架.md)、[`视觉风格指南.md`](./references/视觉风格指南.md)。这些是导航，不能取代原文。

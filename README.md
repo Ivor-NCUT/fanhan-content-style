@@ -8,6 +8,8 @@
 
 当前有 11 篇飞书完整文档和 1 篇对话定稿，视觉材料不足以确定封面、配色或固定配图习惯。这是可继续用新样稿迭代的第一版。
 
+内容需要海报、配图、排版或 PPT 时，调用 [泛函设计风格 Skill](https://github.com/Ivor-NCUT/fanhan-design)；当前环境未安装时，先从该仓库根目录安装。两套规则各自在原仓库维护。
+
 ## 权利范围
 
 [`LICENSE`](LICENSE) 的 MIT 条款适用于本仓库的 Skill 指令与辅助代码。完整原文及其图片、附件引用的权利范围见 [`CORPUS_NOTICE.md`](CORPUS_NOTICE.md)。
