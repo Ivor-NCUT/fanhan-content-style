@@ -173,5 +173,21 @@
     "style_reference",
     "citation_material",
     "memory_source"
+  ],
+  "conversation_examples": [
+    {
+      "title": "来招募一个 AI Native 产品线负责人",
+      "type": "岗位 JD / 替客户招募短帖",
+      "author": "泛函",
+      "source": "2026-09-27 用户在本次对话中亲自修改的定稿",
+      "path": "examples/岗位JD/AI-Native-产品线负责人-用户定稿.md",
+      "sha256": "4fe64e28a28f230a59079cc0e05e1870ddaa77efdede9ab83a3e94a77aecd632",
+      "uses": [
+        "style_reference",
+        "citation_material",
+        "memory_source"
+      ],
+      "priority": "岗位 JD 同体裁优先示例"
+    }
   ]
 }
