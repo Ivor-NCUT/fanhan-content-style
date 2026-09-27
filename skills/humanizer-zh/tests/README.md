@@ -4,7 +4,7 @@
 
 ## 文本案例
 
-让所使用的 Agent 读取仓库的 `SKILL.md`，再逐条执行 [fixtures/cases.json](fixtures/cases.json) 中的 `request` 与 `input`。分别保存输入和输出；不要把预期改写措辞提供给 Agent。
+让所使用的 Agent 读取本目录上一级的 `SKILL.md`，再逐条执行 [fixtures/cases.json](fixtures/cases.json) 中的 `request` 与 `input`。分别保存输入和输出；不要把预期改写措辞提供给 Agent。
 
 18 条案例覆盖：缺少数据时不补造指标；保留推测与归因；保留独立列举项；正在与计划；数量、范围和否定；未知施事者；作者样本；引语；同时发生与前置条件；以及发布顺序和授权条件。
 
@@ -25,7 +25,7 @@
 完成后运行：
 
 ```bash
-python3 tests/check_structure.py tests/fixtures/structure.md /path/to/edited-copy.md
+python3 skills/humanizer-zh/tests/check_structure.py skills/humanizer-zh/tests/fixtures/structure.md /path/to/edited-copy.md
 ```
 
 脚本检查 YAML、代码、标题、链接目标、表格、步骤和显式 ID 是否与输入完全一致。它只读取文件，检查失败返回非零状态。用户明确要求改标题或重排结构的任务不适用这个严格检查。
@@ -34,4 +34,4 @@ python3 tests/check_structure.py tests/fixtures/structure.md /path/to/edited-cop
 
 2026-09-23 的本地评测使用同一模型配置的独立代理分别运行旧版与修订版，每版对每个输入运行一次。18 条短例经人工核对未发现新增事实或关键条件丢失；Markdown 受保护内容保持一致。两篇长文另行检查了作者态度和论点变化。
 
-用户提供的文章、原始对话、个人路径及完整运行记录不随本仓库发布。单次运行的结果不代表稳定通过率；没有固定采样参数，也没有跨模型测试。脚本通过、字数减少或模型自评分都不能替代人工语义核对。
+此旧基线的原始评测文章、对话和完整运行记录未随仓库发布。单次运行的结果不代表稳定通过率；没有固定采样参数，也没有跨模型测试。脚本通过、字数减少或模型自评分都不能替代人工语义核对。
