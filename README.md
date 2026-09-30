@@ -1,5 +1,7 @@
 # 泛函内容风格
 
+本仓库是三仓 Context OS 的**内容风格层**。跨仓发现入口为 [`context-os.json`](context-os.json) 和 [`AGENTS.md`](AGENTS.md)；当前个人与业务事实由私有 [all-about-fanhan](https://github.com/Ivor-NCUT/all-about-fanhan) 维护，视觉规则由 [fanhan-design](https://github.com/Ivor-NCUT/fanhan-design) 维护。私有仓的内容不会同步到本公开仓库。
+
 公开同步仓库：[Ivor-NCUT/fanhan-content-style](https://github.com/Ivor-NCUT/fanhan-content-style)。每次调用 Skill 前先以 `gh api` 检查 `main` 最新提交；本地版本不同则先同步更新再执行。每次迭代 Skill 后，将完整变更推送到仓库并回读验收。具体规则见 [`SKILL.md`](SKILL.md)「仓库同步」。
 
 这个 Skill 用完整原文校准写作语气，服务公众号、即刻、岗位 JD、个人故事、商业观点和课程内容。仓库根目录的 [`SKILL.md`](SKILL.md) 是入口；每次写作按其中指引读取写作 DNA、全部 11 篇飞书原文和当前业务材料，再按 [`内容类型路由`](references/内容类型路由.md)重点对照同体裁示例。

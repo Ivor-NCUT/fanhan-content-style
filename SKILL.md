@@ -5,6 +5,10 @@ description: 以泛函本人的完整原文校准语气，按内容类型路由�
 
 # 泛函内容风格
 
+## 跨仓 Context OS
+
+本仓库只负责“怎么写”。处理泛函当下的个人、业务或项目内容时，先按 [`context-os.json`](context-os.json) 找到私有 `Ivor-NCUT/all-about-fanhan`，只读取本次需要且已核实的事实；对外稿只能使用该仓 `public/` 中再次核实的信息。读不到私有仓时向用户取得本次事实，不把本仓历史语料当成当前业务状态。需要视觉呈现时按清单调用 `Ivor-NCUT/fanhan-design`；纯文字任务无需加载设计仓。跨仓隐私与写回边界见 [`AGENTS.md`](AGENTS.md)。
+
 ## 仓库同步（每次调用必做）
 
 本 Skill 的公开仓库是 [`Ivor-NCUT/fanhan-content-style`](https://github.com/Ivor-NCUT/fanhan-content-style)，`main` 为同步基准。开始任何写作前，必须用 `gh api repos/Ivor-NCUT/fanhan-content-style/commits/main --jq .sha` 检查远端提交，并与本地 `.upstream-commit` 记录比较；记录缺失或提交不同，先用 `gh api` 读取 `main` 的最新文件并更新本 Skill，再开始写作。同步时保留仅存在于本机且尚未发布的新增材料，若同一路径内容冲突，以远端最新版本为准并把本地改动重新合并进去。更新完成后写入新的 `.upstream-commit`。

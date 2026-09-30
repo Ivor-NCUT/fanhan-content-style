@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "repository": "Ivor-NCUT/fanhan-content-style",
+  "role": "content",
+  "visibility": "public",
+  "entrypoints": ["README.md", "AGENTS.md", "SKILL.md"],
+  "owns": ["writing_voice", "content_rules", "approved_writing_examples"],
+  "peers": {
+    "context": "Ivor-NCUT/all-about-fanhan",
+    "design": "Ivor-NCUT/fanhan-design"
+  }
+}
