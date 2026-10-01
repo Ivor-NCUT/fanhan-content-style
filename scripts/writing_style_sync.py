@@ -231,14 +231,14 @@ class Sync:
         atomic(self.meta, json.dumps({'sha': sha, 'paths': sorted(remote)}).encode())
         atomic(self.root / '.upstream-commit', (sha + '\n').encode())
         atomic(self.state / 'status.json', json.dumps({'checked_at': time.time(), 'commit': sha,
-               'pending_publication': sorted(set(pending)), 'remote_interval_seconds': 10}, ensure_ascii=False).encode())
+                'pending_publication': sorted(set(pending)), 'execution_mode': 'scheduled_once'}, ensure_ascii=False).encode())
         return sha
 
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--once', action='store_true')
-    args = parser.parse_args()
+    parser.add_argument('--once', action='store_true', help='Compatibility flag; every invocation runs once')
+    parser.parse_args()
     home = Path.home()
     sync = Sync(Path(__file__).resolve().parents[1],
                 home / '.codex/plugins/cache/openai-curated-remote/write-like-me',
@@ -248,24 +248,15 @@ def main():
             fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
         except BlockingIOError:
             raise SystemExit('Synchronization is already running')
-        next_remote = 0
-        while True:
-            try:
-                count = sync.local()
-                if time.monotonic() >= next_remote:
-                    sha = sync.remote()
-                    sync.local()
-                    next_remote = time.monotonic() + 10
-                    atomic(sync.state / 'last-error.txt', b'')
-                    if args.once:
-                        print(json.dumps({'plugins': count, 'commit': sha}))
-                        return
-            except Exception as e:
-                atomic(sync.state / 'last-error.txt', f'{type(e).__name__}: {e}\n'.encode())
-                if args.once:
-                    raise
-                next_remote = time.monotonic() + 10
-            time.sleep(1)
+        try:
+            count = sync.local()
+            sha = sync.remote()
+            sync.local()
+            atomic(sync.state / 'last-error.txt', b'')
+            print(json.dumps({'plugins': count, 'commit': sha}))
+        except Exception as e:
+            atomic(sync.state / 'last-error.txt', f'{type(e).__name__}: {e}\n'.encode())
+            raise
 
 
 if __name__ == '__main__':
