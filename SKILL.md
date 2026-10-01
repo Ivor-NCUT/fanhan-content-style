@@ -19,7 +19,7 @@ description: 以泛函本人的完整原文校准语气，按内容类型路由�
 
 ## 写前
 
-本机 Writing Style 插件与本 Skill 的个人规则和全文材料按 [`Writing-Style-同步.md`](./references/Writing-Style-同步.md)共享及双向同步。修订个人风格时编辑本 Skill 或插件的个人风格同步区块；插件通用检索指令独立保留。新增语料仍须核对公开授权，不能因后台同步自动公开。同步冲突须保留两端原文，解决前不得报告同步完成。
+本机 Writing Style 插件与本 Skill 的个人规则和全文材料按 [`Writing-Style-同步.md`](./references/Writing-Style-同步.md)共享及双向同步。修订个人风格时编辑本 Skill 或插件的个人风格同步区块；插件通用检索指令独立保留。新增语料仍须核对公开授权，不能因后台同步自动公开。同步冲突须保留两端原文，解决前不得报告同步完成。插件重装后须核对个人规则区块和共享语料入口均已恢复。
 
 1. 先读完 [`Writing-DNA.md`](./references/Writing-DNA.md)、[`语言DNA.md`](./references/语言DNA.md)、[`文章结构模板.md`](./references/文章结构模板.md)、[`写作视角与认知框架.md`](./references/写作视角与认知框架.md)、[`视觉风格指南.md`](./references/视觉风格指南.md)。这些是导航，不能取代原文。
 2. 按 [`语料索引.md`](./references/语料索引.md)读完 `raw/` 与 `materials/` 中的全部 11 篇原文，再读 [`内容类型路由.md`](./references/内容类型路由.md)，按本次主要交付目标重点对照相应示例。岗位 JD 还要读用户定稿全文。用户明确优先写得像，不以节省 token 为由跳过原文；所有原文都可作为素材。用户这次提供的新样稿优先于旧语料。
