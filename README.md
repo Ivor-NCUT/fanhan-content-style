@@ -12,6 +12,12 @@
 
 当前有 11 篇飞书完整文档和 1 篇对话定稿，视觉材料不足以确定封面、配色或固定配图习惯。这是可继续用新样稿迭代的第一版。
 
+## Writing Style 接入
+
+本机插件可共享完整语料与 Humanizer，并双向同步个人规则；GitHub 后台检查、冲突保全、
+新增语料的公开边界与运行方式见 [`Writing Style 同步`](references/Writing-Style-同步.md)。
+插件的云端检索账户只读；此接入作用于当前电脑的插件文件。
+
 ## 权利范围
 
 [`LICENSE`](LICENSE) 的 MIT 条款适用于本仓库的 Skill 指令与辅助代码。完整原文及其图片、附件引用的权利范围见 [`CORPUS_NOTICE.md`](CORPUS_NOTICE.md)。
