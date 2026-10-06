@@ -2,6 +2,8 @@
 
 Read `context-os.json`, then this repository's `SKILL.md` before writing in Fanhan's voice. Existing Skill sync, source and rights rules remain in force.
 
+- For talking-head video editing with static bilingual captions and a persistent title, route to `skills/fanhan-talking-head-edit/SKILL.md`. Deliver the three requested outputs and preserve an editable ChatCut version. Do not add caption animation or sound-effect production. Choose this branch by video deliverable, and the podcast branch by audio deliverable; pure editing does not need the writing corpus, private Context OS lookup or Humanizer rewriting.
+
 - For existing podcast audio/video editing, route through `SKILL.md` to `skills/podcast-editing-fanhan/SKILL.md`. Use the supplied recording and current ChatCut state; the writing corpus, private Context OS lookup and Humanizer rewriting are unnecessary for audio-only editing. Load writing context separately only when drafting new text.
 
 - This public repository owns how to write, not current personal or business facts. For a Fanhan writing task, read only the relevant verified `public/` files from private `Ivor-NCUT/all-about-fanhan` when access is authorized. Use `internal/` only for an explicitly internal output; never copy it, daily notes, candidates, source IDs, or private links into this repository or a public artifact.

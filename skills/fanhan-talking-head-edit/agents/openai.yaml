@@ -1,0 +1,4 @@
+interface:
+  display_name: "泛函口播剪辑"
+  short_description: "通过 ChatCut 保守初剪口播，交付无字幕视频、双语字幕文件和飞书需求记录"
+  default_prompt: "使用 $fanhan-talking-head-edit 处理这条原片，保留表达与逻辑，完成初剪、静态字幕和顶部标题，交付三项最终产出。"
