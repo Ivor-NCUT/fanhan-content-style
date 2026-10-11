@@ -40,7 +40,7 @@ clean_script 会立即写入，仅用于适合机械处理的固定填充和停�
 
 ### ChatCut 0.6.7：双语字幕独立编辑
 
-2026-10-10 的更新邮件说明，原文和译文现在可以分别编辑，双语字幕也支持网页版。当前 Hosted MCP manifest 同样提供独立的原文/译文 Caption Cards，以及按 Card ID 和 revision 调用 `edit_captions` 的 `set_card_text` / `set_card_tokens`。ChatCut 的[字幕文档](https://chatcut.io/docs/transcript-and-captions)也说明 Web Content 面板支持卡片编辑，翻译来源可分别显示、设样式和导出。这适用于已存在的双语字幕；它不证明复制时间线或画面渲染缺陷已修复。
+2026-10-10 的更新邮件说明，原文和译文现在可以分别编辑，双语字幕也支持网页版。当前 Hosted MCP manifest 同样提供独立的原文/译文 Caption Cards，以及按 Card ID 和 revision 调用 `edit_captions` 的 `set_card_text` / `set_card_tokens`。ChatCut 的[字幕文档](https://chatcut.io/docs/transcript-and-captions)也说明 Web Content 面板支持卡片编辑，翻译来源可分别显示、设样式和导出。这适用于已存在的双语字幕。当前 `manage_timelines` 的 duplicate 契约说明会复制 captions（含逐词编辑），这可能缓解复制遗漏；但没有明确保证各语言的翻译覆盖率。以上能力都不证明旧的预览渲染缺陷已修复。
 
 只改一个语言的字幕文字时，先用 `read_captions` 确认目标语言、Card ID、原文、译文、时间范围和 revision，再只编辑目标 Card。单纯改错字或措辞不重建另一语言，也不重复调用 `translate`、`bilingual` 或 `refresh`。若口播转写或句意确实改变，仍需核对另一语言是否语义准确；分开编辑不代表自动同步译文。
 
