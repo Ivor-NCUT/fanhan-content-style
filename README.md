@@ -33,3 +33,7 @@
 ## 权利范围
 
 [`LICENSE`](LICENSE) 的 MIT 条款适用于本仓库的 Skill 指令与辅助代码。完整原文及其图片、附件引用的权利范围见 [`CORPUS_NOTICE.md`](CORPUS_NOTICE.md)。
+
+## 候选人推荐小红书帖子
+
+[子 Skill](skills/candidate-recommendation-xhs/SKILL.md) 将简历和求职偏好转为脱敏标题、正文和大字封面 SVG/PNG，原样复用固定招聘介绍图。macOS 原生脚本无需安装额外依赖；不自动发布。

@@ -10,3 +10,5 @@ Read `context-os.json`, then this repository's `SKILL.md` before writing in Fanh
 - If private context is unavailable, ask for the facts needed for the specific output or work from user-provided facts. Do not treat old corpus examples as current business truth.
 - When the output needs visual composition, discover `Ivor-NCUT/fanhan-design` through `context-os.json` and invoke its `SKILL.md`. Pure writing needs no design install.
 - Change the writing rules and approved examples here. Update the shared contract only when all three manifests and their agent instructions remain consistent. GitHub remote operations use `gh` / `gh api`.
+
+- For candidate recommendation Xiaohongshu posts, use `skills/candidate-recommendation-xhs/SKILL.md`: anonymized title/body, large-type SVG/PNG cover, byte-identical approved service image. This template branch does not require the full writing corpus or fresh design generation. Never commit candidate source material.
