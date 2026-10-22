@@ -30,6 +30,9 @@ do {
  let expected = try String(contentsOf: root.appendingPathComponent("assets/recruiting-service.sha256"), encoding: .utf8).trimmingCharacters(in: .whitespacesAndNewlines)
  let actual = SHA256.hash(data: asset).map { String(format: "%02x", $0) }.joined()
  try require(actual == expected, "Fixed service image hash mismatch; do not regenerate or silently accept a replacement")
+ let figmaTemplate = try String(contentsOf: root.appendingPathComponent("scripts/figma-cover.js"), encoding: .utf8)
+ let figmaPost = try JSONSerialization.data(withJSONObject: ["lines": post.lines, "subtitle": post.subtitle], options: [.sortedKeys])
+ let figmaCode = figmaTemplate.replacingOccurrences(of: "__POST_JSON__", with: String(data: figmaPost, encoding: .utf8)!)
  let about = try String(contentsOf: root.appendingPathComponent("references/about-me.md"), encoding: .utf8)
  try require(!post.body.contains("🌟关于我"), "body is candidate section only; fixed About section is appended automatically")
  let ctx = CGContext(data: nil, width: 1200, height: 1600, bitsPerComponent: 8, bytesPerRow: 4800, space: CGColorSpaceCreateDeviceRGB(), bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue)!
@@ -60,6 +63,7 @@ do {
  let png = bitmap.representation(using: .png, properties: [:])!
  try fm.createDirectory(at: out, withIntermediateDirectories: true)
  try Data(svg.utf8).write(to: out.appendingPathComponent("01_候选人推荐封面.svg"), options: .atomic)
+ try Data(figmaCode.utf8).write(to: out.appendingPathComponent("01_封面_Figma原生文字.js"), options: .atomic)
  try png.write(to: out.appendingPathComponent("01_候选人推荐封面.png"), options: .atomic)
  try asset.write(to: out.appendingPathComponent("02_招聘服务介绍.png"), options: .atomic)
  try Data((post.title+"\n\n"+post.body.trimmingCharacters(in: .whitespacesAndNewlines)+"\n\n"+about).utf8).write(to: out.appendingPathComponent("标题与正文.txt"), options: .atomic)

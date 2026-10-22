@@ -23,7 +23,12 @@ with tempfile.TemporaryDirectory() as tmp:
     assert png[:8] == b'\x89PNG\r\n\x1a\n'
     assert int.from_bytes(png[16:20], 'big') == 1200 and int.from_bytes(png[20:24], 'big') == 1600
     assert (out / '02_招聘服务介绍.png').read_bytes() == (root / 'assets/recruiting-service.png').read_bytes()
-    ET.parse(out / '01_候选人推荐封面.svg')
+    tree = ET.parse(out / '01_候选人推荐封面.svg')
+    assert len(tree.findall('.//{http://www.w3.org/2000/svg}text')) == 5
+    native = (out / '01_封面_Figma原生文字.js').read_text()
+    assert '__POST_JSON__' not in native
+    assert 'figma.createText()' in native and 'editRoundTrip:true' in native
+    assert spec['lines'][0] in native
     assert (out / '标题与正文.txt').read_text().endswith((root / 'references/about-me.md').read_text())
     before = hashlib.sha256(png).digest()
     assert run(out).returncode != 0
