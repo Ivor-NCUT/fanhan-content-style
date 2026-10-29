@@ -188,6 +188,20 @@
         "memory_source"
       ],
       "priority": "岗位 JD 同体裁优先示例"
+    },
+    {
+      "title": "卧槽，这个流程也太丝滑了吧",
+      "type": "X 转述帖 / 行业事件转述",
+      "author": "泛函",
+      "source": "2026-10-29 用户在 X 发布并确认沉淀的定稿。事件来源 https://x.com/theo/status/2115541994995093561 与 https://x.com/theo/status/2115721106254700857",
+      "path": "examples/X转述帖/T3Code-GrokBot-用户定稿.md",
+      "sha256": "23cd8561063c50391e05682e58089847c8355669d8baca9f0f5b0006c32d4c68",
+      "uses": [
+        "style_reference",
+        "citation_material",
+        "memory_source"
+      ],
+      "priority": "X 转述帖同体裁优先示例"
     }
   ]
 }
