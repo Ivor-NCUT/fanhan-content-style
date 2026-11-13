@@ -1,3 +1,5 @@
+> **已弃用（2026-11）**：本文件是 ChatCut 时代的调用约定，DeepSeek Harness 版本请读 [dsh-pipeline.md](dsh-pipeline.md)。保留仅用于历史参考。
+
 # ChatCut 调用约定
 
 本文件封装调用顺序与保护条件，配合当前官方插件 Skill 和 MCP schema 使用。下列示例来自已使用过的 hosted 合约；升级后先核对参数，不把示例当作固定版本 SDK。不要复制官方插件源码或私有录音到 Skill 仓。
