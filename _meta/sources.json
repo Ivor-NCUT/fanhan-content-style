@@ -188,6 +188,20 @@
         "memory_source"
       ],
       "priority": "岗位 JD 同体裁优先示例"
+    },
+    {
+      "title": "职业定位系统课",
+      "type": "课程宣发 / 招生长文",
+      "author": "泛函",
+      "source": "2026-11-09 用户在本次对话中亲自确认的定稿",
+      "path": "examples/课程宣发/职业定位系统课-用户定稿.md",
+      "sha256": "8ccd78ea9f53ab77866a96455e0e80346a0266d7b0076838f954a42a83da6ea5",
+      "uses": [
+        "style_reference",
+        "citation_material",
+        "memory_source"
+      ],
+      "priority": "课程宣发同体裁优先示例"
     }
   ]
 }
